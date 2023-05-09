@@ -201,4 +201,12 @@ view: auto_full {
     type: count
     drill_fields: []
   }
+  measure: sum_of_defaulted {
+    type: sum
+    sql: ${TABLE}.y;;
+  }
+  measure: ratio {
+    type: number
+    sql: ${sum_of_defaulted}/${count};;
+  }
 }
