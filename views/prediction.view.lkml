@@ -6,8 +6,8 @@ view: prediction {
 
   derived_table: {
     sql:
-    SELECT * FROM ML.PREDICT(MODEL `automobile-386111.boosted_model`,
-    (SELECT {% parameter ClientIncome %} AS Client_Annuity,
+    SELECT * FROM ML.PREDICT(MODEL `automobile-386111.Automobile_loan.boosted_model`,
+    (SELECT {% parameter ClientIncome %} AS Client_Income,
             {% parameter CreditAmount %} AS Credit_Amount,
             {% parameter RegistrationDays %} AS Registration_Days,
             {% parameter LoanAnnuity %} AS Loan_Annuity));;

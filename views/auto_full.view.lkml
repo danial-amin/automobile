@@ -203,7 +203,7 @@ view: auto_full {
   }
   measure: sum_of_defaulted {
     type: sum
-    sql: ${TABLE}.y;;
+    sql: ${TABLE}.Defaulted;;
   }
   measure: ratio {
     type: number
